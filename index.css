@@ -5,22 +5,24 @@
     background-color: white;
   }
 
-/********Navigation********/
+  /******** Navigation ********/
 
   #nav-container {
     display: flex;
     align-items: center;
   }
+
   .ic_icon {
     position: absolute;
     right: 2%;
   }
 
-/*******Headline*********/
+  /******* Headline *********/
 
   .headline-section {
     padding: 2%;
   }
+
   .header-text {
     font-family: 'Playfair Display';
     font-size: 4rem;
@@ -28,16 +30,18 @@
     color: #1A2236;
     line-height: 1%;
   }
+
   .header-description {
-    font-family: 'poppins';
+    font-family: 'poppins', sans-serif;
     font-weight: 300;
   }
+
   .headline-button {
-    background-color: #1A2236;
+    background-color: #1a2236;
     color: white;
     padding: 0.1em;
     text-align: center;
     font-size: 1.5em;
-    font-family: 'poppins';
+    font-family: 'poppins',sans-serif;
   }
 }
