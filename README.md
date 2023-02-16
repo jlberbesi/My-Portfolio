@@ -80,4 +80,4 @@ I would like to thank the entire microverse staff and students for such a wonder
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
