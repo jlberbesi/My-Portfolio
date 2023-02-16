@@ -18,7 +18,7 @@
 
 # 📖 [My-Portfolio] <a name="about-project"></a>
 
-**[My-Portfolio]** is a portfolio header section project with debugging tools that help in proper coding practices.
+**[My-Portfolio]** is a portfolio header section project with debugging tools that help in proper coding practices. It also comes with a proper design
 
 ## 🛠 Built With <a name="built-with"></a>
 
