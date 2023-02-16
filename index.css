@@ -24,10 +24,10 @@
   }
 
   .header-text {
-    font-family: 'Playfair Display';
+    font-family: 'Playfair Display', sans-serif;
     font-size: 4rem;
     font-weight: 400;
-    color: #1A2236;
+    color: #1a2236;
     line-height: 1%;
   }
 
@@ -42,6 +42,6 @@
     padding: 0.1em;
     text-align: center;
     font-size: 1.5em;
-    font-family: 'poppins',sans-serif;
+    font-family: 'poppins', sans-serif;
   }
 }
