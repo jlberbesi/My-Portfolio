@@ -136,14 +136,11 @@ ul li {
 
 .see_project:hover {
   background-color: #98dede;
+  cursor: pointer;
 }
 
 #projects h1 {
   margin-left: 1em;
-}
-
-.see_project:hover {
-  cursor: pointer;
 }
 
 .see_project p {
