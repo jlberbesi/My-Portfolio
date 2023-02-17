@@ -3,6 +3,15 @@ body {
   padding: 0%;
   background-color: white;
   min-width: 368px;
+  font-family: 'poppins', sans-serif;
+}
+
+h1 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #1a2236;
+  line-height: 100%;
 }
 
 /******** Navigation ********/
@@ -31,14 +40,6 @@ body {
   flex-direction: column;
 }
 
-.header-text {
-  font-family: 'Playfair Display', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  color: #1a2236;
-  line-height: 100%;
-}
-
 .header-description {
   font-family: 'poppins', sans-serif;
   font-weight: 300;
@@ -51,7 +52,7 @@ body {
   font-size: 1em;
   font-weight: 500;
   font-family: 'poppins', sans-serif;
-  margin-bottom: 4rem;
+  margin-bottom: 15rem;
 }
 
 .headline-button a {
@@ -63,7 +64,179 @@ body {
   background-image: url(assets/shapes/image_geometry_2.jpg);
   width: 100%;
   height: 10rem;
-  margin-bottom: 4rem;
   position: absolute;
   top: 30rem;
+  left: 0;
+}
+
+/***** Project Section *****/
+
+.project_cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20%, 20%, 20%, 20%, 20%;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  margin: 0;
+}
+
+.project_description {
+  margin-top: 0%;
+  background-color: #1a2236;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.project_description h2 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+.project_description ul {
+  display: flex;
+  gap: 1.5em;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.project_description ul li button {
+  background-color: #98dede;
+  border: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+.see_project {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 18em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-color: white;
+}
+
+.see_project:hover {
+  background-color: #98dede;
+}
+
+#projects h1 {
+  margin-left: 1em;
+}
+
+.see_project:hover {
+  cursor: pointer;
+}
+
+.see_project p {
+  color: white;
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+
+.see_project img {
+  width: 2em;
+}
+
+/***** About Myself *****/
+
+#about_myself {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+#about_myself button {
+  background-color: #1a2236;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+#about_myself button:hover {
+  cursor: pointer;
+}
+
+#about_myself button p {
+  color: white;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.about_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.about_card {
+  padding: 1.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.c1 {
+  background-color: #1c528a;
+}
+
+.c2 {
+  background-color: #e2505c;
+}
+
+.c3 {
+  background-color: #febf52;
+}
+
+.about_card h2 {
+  margin-bottom: 0;
+  color: white;
+}
+
+.about_card ul {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 1em;
+}
+
+.about_card ul li {
+  list-style: disc;
+  color: white;
+}
+
+.about_card ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.about_card svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.c2 svg {
+  bottom: -0.1em;
+  right: -0.5em;
 }
