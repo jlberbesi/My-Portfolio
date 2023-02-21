@@ -237,7 +237,6 @@ ul li {
   bottom: -0.1em;
   right: -0.5em;
 }
-
 /***** Contact Section *****/
 
 #contact {
@@ -270,4 +269,9 @@ form button {
   color: white;
   font-family: 'poppins', sans-serif;
   font-size: 1em;
+  height: 44px;
+}
+
+#name {
+  height: 52px;
 }
