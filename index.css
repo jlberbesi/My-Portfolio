@@ -269,4 +269,13 @@ form button {
   color: white;
   font-family: 'poppins', sans-serif;
   font-size: 1em;
+  height: 44px;
+}
+
+#name {
+  height: 52px;
+}
+
+#email {
+  height: 52px;
 }
