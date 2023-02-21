@@ -237,3 +237,37 @@ ul li {
   bottom: -0.1em;
   right: -0.5em;
 }
+
+/***** Contact Section *****/
+
+#contact {
+  padding: 1em;
+  background-color: #f9f9fa;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input {
+  border: solid #dfdfe0 0.1em;
+  border-radius: 0.3em;
+}
+
+textarea {
+  border: solid #dfdfe0 0.1em;
+  border-radius: 0.3em;
+}
+
+input:focus {
+  border: solid rgb(5, 250, 5) 0.1em;
+}
+
+form button {
+  background: #1a2236;
+  color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: 1em;
+}
