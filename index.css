@@ -8,10 +8,10 @@ body {
 
 h1 {
   font-family: 'Playfair Display', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   color: #1a2236;
-  line-height: 100%;
+  line-height: 10%;
 }
 
 /******** Navigation ********/
@@ -236,4 +236,94 @@ ul li {
 .c2 svg {
   bottom: -0.1em;
   right: -0.5em;
+}
+
+/***** Contact Section *****/
+
+#contact {
+  padding: 1em;
+  background-color: #f9f9fa;
+  position: relative;
+}
+
+#contact h1 {
+  text-align: center;
+}
+
+#contact .shape1 {
+  position: relative;
+  left: -1em;
+  top: -1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+input {
+  border: solid #dfdfe0 0.1em;
+  border-radius: 0.3em;
+  padding-left: 1em;
+  padding-top: 2em;
+}
+
+textarea {
+  border: solid #dfdfe0 0.1em;
+  border-radius: 0.3em;
+  padding: 1em;
+}
+
+input::placeholder {
+  position: relative;
+  top: -2.5em;
+}
+
+form .form_button {
+  background: #1a2236;
+  color: white;
+  font-family: 'poppins', sans-serif;
+  font-size: 1em;
+  height: 44px;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+form .form_button:hover {
+  cursor: pointer;
+}
+
+#name {
+  height: 52px;
+}
+
+#email {
+  height: 52px;
+}
+
+/***** Footer *****/
+
+footer {
+  background-color: #1a2236;
+  padding: 1em;
+}
+
+.get_resume {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.get_resume .text {
+  color: #92dcdc;
+}
+
+.handles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.handles svg:hover {
+  cursor: pointer;
 }
