@@ -280,7 +280,7 @@ input::placeholder {
   top: -2.5em;
 }
 
-form button {
+form .form_button {
   background: #1a2236;
   color: white;
   font-family: 'poppins', sans-serif;
@@ -290,7 +290,7 @@ form button {
   margin-bottom: 3em;
 }
 
-form button:hover {
+form .form_button:hover {
   cursor: pointer;
 }
 
