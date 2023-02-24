@@ -8,10 +8,14 @@ body {
 
 h1 {
   font-family: 'Playfair Display', sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 400;
   color: #1a2236;
   line-height: 10%;
+}
+
+ul li {
+  list-style: none;
 }
 
 /******** Navigation ********/
@@ -19,6 +23,10 @@ h1 {
 #nav-container {
   display: flex;
   align-items: center;
+}
+
+.nav_list_container {
+  display: none;
 }
 
 .shape1 {
@@ -78,6 +86,10 @@ h1 {
   grid-template-rows: 20%, 20%, 20%, 20%, 20%;
 }
 
+.desktop-project-shapes {
+  display: none;
+}
+
 .card {
   width: 100%;
   display: flex;
@@ -99,6 +111,10 @@ h1 {
   padding: 1rem;
 }
 
+.desktop-shapes {
+  display: none;
+}
+
 .project_description h2 {
   color: white;
   font-size: 1.5em;
@@ -117,10 +133,6 @@ h1 {
 .project_description ul li button {
   background-color: #98dede;
   border: none;
-}
-
-ul li {
-  list-style: none;
 }
 
 .see_project {
@@ -149,8 +161,16 @@ ul li {
   font-weight: lighter;
 }
 
-.see_project img {
+.see_project .union {
   width: 2em;
+}
+
+.see_project .union_1 {
+  display: none;
+}
+
+.desktop-project-designs {
+  display: none;
 }
 
 /***** About Myself *****/
@@ -238,6 +258,10 @@ ul li {
   right: -0.5em;
 }
 
+.extra_card {
+  display: none;
+}
+
 /***** Contact Section *****/
 
 #contact {
@@ -302,6 +326,15 @@ form .form_button:hover {
   height: 52px;
 }
 
+label {
+  display: none;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
 /***** Footer *****/
 
 footer {
@@ -326,4 +359,460 @@ footer {
 
 .handles svg:hover {
   cursor: pointer;
+}
+
+/***** Desktop Version *****/
+
+@media  screen and (min-width: 768px) {
+  
+  /***** Navigation *****/
+
+  nav {
+    width: 100%;
+    margin: auto;
+    box-shadow: 0px 0.5px 0px #dddfe6;
+  }
+
+  #nav-container {
+    padding: 1em;
+    font-weight: 400;
+  }
+
+  .nav_list_container {
+    width: 25%;
+    margin: auto;
+    display: flex;
+    gap: 2em;
+    padding-inline-start: 0%;
+  }
+
+  .nav_list_container li a {
+    text-decoration: none;
+    color: #1a2236;
+    font-size: 0.7em;
+    position: relative;
+  }
+
+  .nav_list_container li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.1em;
+    background-color: #1a2236;
+    display: block;
+    transition: 0.5s;
+  }
+
+  .nav_list_container li a:hover::after {
+    width: 100%;  
+  }
+
+  .nav_list_container li a:focus::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1em;
+    background-color: #1a2236;
+    display: block;
+  }
+
+  .shape1 {
+    display: none;
+  }
+
+  .ic_icon {
+    display: none;
+  }
+
+  /***** Headline Section *****/
+
+  .headline-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    padding: 6em 4em 0 5em;
+    background-image: url(assets/shapes/image_dots.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 7.9em;
+  }
+
+  .right-col {
+    background-image: url(assets/shapes/image-geometry_1.png);
+    background-size: cover;
+    height: 142vh;
+  }
+
+  .header-description {
+    letter-spacing: -0.01em;
+    font-weight: 400;
+    font-size: 0.8em;
+  }
+
+  .headline-button {
+    width: 10em;
+    margin: 2em 0 0 0;
+  }
+
+  .shape2 {
+    display: none;
+  }
+
+  /***** Projects Section *****/
+
+  #projects {
+    margin-top: 4em;
+  }
+
+  .desktop-project-designs {
+    display: block;
+  }
+
+  .project_cards {
+    display: none;
+  } 
+
+  .design_row1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .design_row1 .r1_col1 {
+    width: 20%;
+    position: relative;
+  }
+
+  .r1_col1 .projects-header {
+    transform: rotate(270deg);
+    position: absolute;
+    top: 15%;
+    right: 2%;
+  }
+
+  .design_row1 .r1_col2 {
+    width: 10%;
+    position: relative;
+  }
+
+  .r1_col2 .dots {
+    background-image: url(assets/shapes/image_dots.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 100% 0;
+  }
+
+  .design_row1 .r1_col3{
+    width: 69%;
+    background-image: url(assets/shapes/Rectangle\ 21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .r1_col3 .project_description {
+    margin-top: 10em;
+    background-color: #1a2236ef;
+  }
+
+  .design_row2 {
+    display: flex;
+    justify-content: space-between;
+    height: 60vh;
+  }
+
+  .design_row2 .r2_col1 {
+    width: 30%;
+    position: relative;
+  }
+
+  .r2_col1 .rectangle-46 {
+    background-image: url(assets/shapes/Rectangle\ 46.png);
+    width: 100%;
+    height: 73%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 3em;
+    position: absolute;
+  }
+
+  .design_row2 .r2_col2 {
+    width: 35%;
+    position: relative;
+  }
+
+  .r2_col2 .image-geometry-2 {
+    background-image: url(assets/shapes/image-geometry_2.png);
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
+  .design_row2 .r2_col3 {
+    width: 35%;
+    position: relative;
+  }
+
+  .r2_col3 {
+    background-image: url(assets/shapes/Rectangle\ 21\ \(4\).png);
+    background-size: cover;
+    background-position: -4em -2em;
+  }
+
+  .r2_col3 .project_description {
+    margin-top: 2em;
+    padding: 1em 2em 0em 2em;
+    height: 10em;
+  }
+
+  .r2_col3 .project_description .see_project {
+    background-color: white;
+    height: 30%;
+    width: 60%;
+    margin-bottom: 4em;
+  }
+
+  .r2_col3 .project_description ul {
+    gap: 0.4em;
+    margin-bottom: -0.8em;
+  }
+
+  .r2_col3 .project_description ul li button {
+    padding: 0.8em;
+    width: 100%;
+  }
+
+  .r2_col3 .project_description .project_name {
+    font-weight: 400;
+    width: 100%;
+    line-height: 0.7em;
+  }
+
+  .r2_col3 .project_description .see_project p {
+    color: #1a2236;
+    font-size: 1em;
+  }
+
+  .r2_col3 .rectangle-26 {
+    background-image: url(assets/shapes/Rectangle\ 26.png);
+    width: 100%;
+    height: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .design_row3 {
+    margin-top: 8em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .design_row3 .r3_col1 {
+    width: 52%;
+    height: 50vh;
+    position: relative;
+  }
+
+  .r3_col1 .rectangle-21_1 {
+    background-image: url(assets/shapes/Rectangle\ 21\ \(1\).png);
+    width: 102%;
+    height: 165%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: -70.5%;
+  }
+
+  .design_row3 .r3_col2 {
+    width: 48%;
+    height: 50vh;
+  }
+
+  .r3_col2 {
+    background-image: url(assets/shapes/image-geometry_3.png);
+    width: 80%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 98%;
+  }
+
+  .design_row4 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .r4_col1 {
+    top: -0.9em;
+    position: relative;
+    width: 53%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .geometry_5 {
+    width: 25%;
+    height: 5em;
+  }
+
+  .geometry_4 {
+    width: 10%;
+    height: 3em;
+  }
+
+  .r4_col2 {
+    width: 47%;
+    position: relative;
+    height: 22em;
+  }
+
+  .rectangle-21_2 {
+    background-repeat: no-repeat;
+    background-image: url(assets/shapes/Rectangle\ 21\ \(2\).png);
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    top: -0.9em;
+  }
+
+  /***** About Section *****/
+
+  #about_myself {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .about_text {
+    width: 48%;
+  }
+
+  .about_cards {
+    width: 48%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    gap: 0;
+  }
+
+  .extra_card {
+    display: block;
+    background-image: url(assets/shapes/image_dots.png);
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 70%;
+    position: relative;
+  }
+
+  .square {
+    width: 2em;
+    height: 2em;
+    background-color: #92dcdc;
+    position: absolute;
+    top: 22%;
+    right: 0;
+  }
+
+  /***** Contact Section *****/
+
+  #contact {
+    padding-top: 5em;
+    margin-top: 5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .background-shape1 {
+    width: 15%;
+    height: 25%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(assets/shapes/image-geometry_6.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+  }
+  .contact-container {
+    width: 70%;
+  }
+
+  .input-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .label_container {
+    display: flex;
+    position: relative;
+    gap: 2em;
+    top: 1em;
+    justify-content: center;  
+  }
+
+  label{
+    display: block;
+    width: 50%;
+    color: #1f4a4a;
+  }
+
+  .msg {
+    position: relative;
+    top: 1em;
+  }
+
+  input {
+    width: 45%;
+    padding: 0.5em;
+  }
+
+  #name {
+    margin-right: 4.5%;
+  }
+
+  input::placeholder {
+    visibility: hidden;
+  }
+
+  .form_button {
+    width: 30%;
+    margin: auto;
+  }
+
+  .background-shape2 {
+    width: 10%;
+    height: 20%;
+    background-image: url(assets/shapes/image-geometry_7.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 100%;
+    bottom: -3em;
+    right: 0;
+  }
+
+  /***** footer *****/
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .handles {
+    display: flex;
+    gap: 1em;
+  }
+
+  .get_resume:hover {
+    cursor: pointer;
+  }
 }
