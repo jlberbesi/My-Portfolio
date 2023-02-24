@@ -852,4 +852,8 @@ footer {
   .get_resume:hover {
     cursor: pointer;
   }
+
+  h1:hover {
+    font-size: 120px;
+  }
 }
