@@ -291,6 +291,8 @@ input {
   border-radius: 0.3em;
   padding-left: 1em;
   padding-top: 2em;
+  width: 100%;
+  margin-bottom: 2em;
 }
 
 textarea {
@@ -330,11 +332,6 @@ label {
   display: none;
 }
 
-input {
-  width: 100%;
-  margin-bottom: 2em;
-}
-
 /***** Footer *****/
 
 footer {
@@ -363,7 +360,7 @@ footer {
 
 /***** Desktop Version *****/
 
-@media  screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   
   /***** Navigation *****/
 
