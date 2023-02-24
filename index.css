@@ -361,13 +361,12 @@ footer {
 /***** Desktop Version *****/
 
 @media screen and (min-width: 768px) {
-  
   /***** Navigation *****/
 
   nav {
     width: 100%;
     margin: auto;
-    box-shadow: 0px 0.5px 0px #dddfe6;
+    box-shadow: 0 0.5px 0 #dddfe6;
   }
 
   #nav-container {
@@ -401,7 +400,7 @@ footer {
   }
 
   .nav_list_container li a:hover::after {
-    width: 100%;  
+    width: 100%;
   }
 
   .nav_list_container li a:focus::after {
@@ -472,7 +471,7 @@ footer {
 
   .project_cards {
     display: none;
-  } 
+  }
 
   .design_row1 {
     display: flex;
@@ -505,7 +504,7 @@ footer {
     background-position: 100% 0;
   }
 
-  .design_row1 .r1_col3{
+  .design_row1 .r1_col3 {
     width: 69%;
     background-image: url(assets/shapes/Rectangle\ 21.png);
     background-size: cover;
@@ -551,21 +550,21 @@ footer {
     background-repeat: no-repeat;
     position: absolute;
   }
+  
+  .r2_col3 {
+    background-image: url(assets/shapes/Rectangle\ 21\ \(4\) .png);
+    background-size: cover;
+    background-position: -4em -2em;
+  }
 
   .design_row2 .r2_col3 {
     width: 35%;
     position: relative;
   }
 
-  .r2_col3 {
-    background-image: url(assets/shapes/Rectangle\ 21\ \(4\).png);
-    background-size: cover;
-    background-position: -4em -2em;
-  }
-
   .r2_col3 .project_description {
     margin-top: 2em;
-    padding: 1em 2em 0em 2em;
+    padding: 1em 2em 0 2em;
     height: 10em;
   }
 
@@ -619,18 +618,13 @@ footer {
   }
 
   .r3_col1 .rectangle-21_1 {
-    background-image: url(assets/shapes/Rectangle\ 21\ \(1\).png);
+    background-image: url(assets/shapes/Rectangle\ 21\ \(1\) .png);
     width: 102%;
     height: 165%;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     top: -70.5%;
-  }
-
-  .design_row3 .r3_col2 {
-    width: 48%;
-    height: 50vh;
   }
 
   .r3_col2 {
@@ -640,6 +634,11 @@ footer {
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size: 98%;
+  }
+  
+  .design_row3 .r3_col2 {
+    width: 48%;
+    height: 50vh;
   }
 
   .design_row4 {
@@ -673,7 +672,7 @@ footer {
 
   .rectangle-21_2 {
     background-repeat: no-repeat;
-    background-image: url(assets/shapes/Rectangle\ 21\ \(2\).png);
+    background-image: url(assets/shapes/Rectangle\ 21\ \(2\) .png);
     height: 100%;
     width: 60%;
     position: absolute;
@@ -737,8 +736,8 @@ footer {
     background-image: url(assets/shapes/image-geometry_6.png);
     background-size: contain;
     background-repeat: no-repeat;
-
   }
+  
   .contact-container {
     width: 70%;
   }
@@ -753,10 +752,10 @@ footer {
     position: relative;
     gap: 2em;
     top: 1em;
-    justify-content: center;  
+    justify-content: center;
   }
 
-  label{
+  label {
     display: block;
     width: 50%;
     color: #1f4a4a;
@@ -803,7 +802,7 @@ footer {
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .handles {
     display: flex;
     gap: 1em;
