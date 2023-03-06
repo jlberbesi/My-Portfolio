@@ -24,12 +24,10 @@ ul li {
   display: flex;
   align-items: center;
   position: relative;
-  
 }
 
 #nav_list_container {
   display: none;
-  
   flex-direction: column;
   text-align: center;
   padding-right: 5em;
@@ -52,10 +50,10 @@ a {
   padding-right: 1em;
   position: relative;
   right: -4em;
-  top: 0em;
+  top: 0;
 }
 
-#close-btn img {
+#close-btn .img {
   width: 2em;
 }
 
@@ -81,7 +79,7 @@ a {
 }
 
 #d2 {
-  background-image:  url(assets/shapes/image_dots.png);
+  background-image: url(assets/shapes/image_dots.png);
   width: 20%;
   position: absolute;
   background-repeat: no-repeat;
@@ -100,7 +98,6 @@ a {
   bottom: 1em;
   background-repeat: no-repeat;
   left: 0%;
- 
 }
 
 /******* Headline *********/
@@ -459,8 +456,7 @@ footer {
     padding-inline-start: 0%;
     flex-direction: row;
     text-align: center;
-    padding-right: 0em;
-    gap: 3%;
+    padding-right: 0;
   }
 
   .desktop_nav_list_container li a {
