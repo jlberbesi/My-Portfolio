@@ -6,6 +6,8 @@ let homeBtn = document.getElementById('home-btn');
 let projectsBtn = document.getElementById('projects-btn');
 let aboutBtn = document.getElementById('about-btn');
 let contactBtn = document.getElementById('contact-btn');
+let headerDesign = document.getElementById('shape2')
+let shape1 = document.getElementById('shape1');
 
 
 homeMenu.addEventListener('click', () => {
@@ -17,7 +19,10 @@ homeMenu.addEventListener('click', () => {
     body.style.position = 'sticky';
     body.style.overflow = 'hidden';
     //nav.style.width = '100%';
+    headerDesign.style.display = 'none';
+    shape1.style.display = 'none';
   } )
+
 
 closeBtn.addEventListener('click', () => {
     navCo.style.display = 'none';
@@ -25,6 +30,8 @@ closeBtn.addEventListener('click', () => {
     //logo.style.display = 'block';
     body.style.position = 'static';
     body.style.overflow = 'auto';
+    headerDesign.style.display = 'block';
+    shape1.style.display = 'block';
     //nav.style.width = 'auto';
   } )
 
@@ -35,6 +42,8 @@ closeBtn.addEventListener('click', () => {
     body.style.position = 'static';
     body.style.overflow = 'auto';
     //nav.style.width = 'auto';
+    headerDesign.style.display = 'block';
+    shape1.style.display = 'block';
   } )
 
   projectsBtn.addEventListener('click', () => {
@@ -44,6 +53,8 @@ closeBtn.addEventListener('click', () => {
     body.style.position = 'static';
     body.style.overflow = 'auto';
     //nav.style.width = 'auto';
+    headerDesign.style.display = 'block';
+    shape1.style.display = 'block';
   } )
 
   aboutBtn.addEventListener('click', () => {
@@ -53,6 +64,8 @@ closeBtn.addEventListener('click', () => {
     body.style.position = 'static';
     body.style.overflow = 'auto';
     //nav.style.width = 'auto';
+    headerDesign.style.display = 'block';
+    shape1.style.display = 'block';
   } )
 
   contactBtn.addEventListener('click', () => {
@@ -62,4 +75,6 @@ closeBtn.addEventListener('click', () => {
     body.style.position = 'static';
     body.style.overflow = 'auto';
     //nav.style.width = 'auto';
+    headerDesign.style.display = 'block';
+    shape1.style.display = 'block';
   } )
