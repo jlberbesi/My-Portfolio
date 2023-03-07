@@ -144,7 +144,7 @@ a {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 20%, 20%, 20%, 20%, 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
 .desktop-project-shapes {
