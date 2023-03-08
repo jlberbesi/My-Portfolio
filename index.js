@@ -13,7 +13,74 @@ const popUpWindow = document.getElementById('popup-window');
 const popupCloseBtn = document.getElementById('popup-close-btn');
 const card = document.querySelectorAll(".card");
 
-
+const projectData = [
+  {
+    seeProjectBtn: document.getElementById('project-btn1'),
+    name: "Project name goes here",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo, quidem dolorum totam consequuntur vitae consectetur, odio asperiores voluptas magni tenetur vel. Accusamus ut, minima quas aliquid consectetur cumque molestiae at modi fugit dolores ipsum, perferendis a quam saepe et doloremque quae reiciendis id, assumenda rerum. Fuga voluptatum earum aliquam?",
+    image: document.createElement("IMG"),
+    image_src: document.getElementById('project_img1').src,
+    list1: "HTML/CSS",
+    list2: "Ruby on Rail",
+    list3: "Javascript",
+    p: "see this project"
+  },
+  {
+    seeProjectBtn: document.getElementById('project-btn2'),
+    name: "Project name goes here",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo, quidem dolorum totam consequuntur vitae consectetur, odio asperiores voluptas magni tenetur vel. Accusamus ut, minima quas aliquid consectetur cumque molestiae at modi fugit dolores ipsum, perferendis a quam saepe et doloremque quae reiciendis id, assumenda rerum. Fuga voluptatum earum aliquam?",
+    image: document.createElement("IMG"),
+    image_src: document.getElementById('project_img2').src,
+    list1: "HTML/CSS",
+    list2: "Ruby on Rail",
+    list3: "Javascript",
+    p: "see this project"
+  },
+  {
+    seeProjectBtn: document.getElementById('project-btn3'),
+    name: "Project name goes here",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo, quidem dolorum totam consequuntur vitae consectetur, odio asperiores voluptas magni tenetur vel. Accusamus ut, minima quas aliquid consectetur cumque molestiae at modi fugit dolores ipsum, perferendis a quam saepe et doloremque quae reiciendis id, assumenda rerum. Fuga voluptatum earum aliquam?",
+    image: document.createElement("IMG"),
+    image_src: document.getElementById('project_img3').src,
+    list1: "HTML/CSS",
+    list2: "Ruby on Rail",
+    list3: "Javascript",
+    p: "see this project"
+  },
+  {
+    seeProjectBtn: document.getElementById('project-btn4'),
+    name: "Project name goes here",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo, quidem dolorum totam consequuntur vitae consectetur, odio asperiores voluptas magni tenetur vel. Accusamus ut, minima quas aliquid consectetur cumque molestiae at modi fugit dolores ipsum, perferendis a quam saepe et doloremque quae reiciendis id, assumenda rerum. Fuga voluptatum earum aliquam?",
+    image: document.createElement("IMG"),
+    image_src: document.getElementById('project_img4').src,
+    list1: "HTML/CSS",
+    list2: "Ruby on Rail",
+    list3: "Javascript",
+    p: "see this project"
+  },
+  {
+    seeProjectBtn: document.getElementById('project-btn5'),
+    name: "Project name goes here",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo, quidem dolorum totam consequuntur vitae consectetur, odio asperiores voluptas magni tenetur vel. Accusamus ut, minima quas aliquid consectetur cumque molestiae at modi fugit dolores ipsum, perferendis a quam saepe et doloremque quae reiciendis id, assumenda rerum. Fuga voluptatum earum aliquam?",
+    image: document.createElement("IMG"),
+    image_src: document.getElementById('project_img5').src,
+    list1: "HTML/CSS",
+    list2: "Ruby on Rail",
+    list3: "Javascript",
+    p: "see this project"
+  },
+  {
+    seeProjectBtn: document.getElementById('project-btn6'),
+    name: "Project name goes here",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt explicabo, quidem dolorum totam consequuntur vitae consectetur, odio asperiores voluptas magni tenetur vel. Accusamus ut, minima quas aliquid consectetur cumque molestiae at modi fugit dolores ipsum, perferendis a quam saepe et doloremque quae reiciendis id, assumenda rerum. Fuga voluptatum earum aliquam?",
+    image: document.createElement("IMG"),
+    image_src: document.getElementById('project_img6').src,
+    list1: "HTML/CSS",
+    list2: "Ruby on Rail",
+    list3: "Javascript",
+    p: "see this project"
+  }
+]
 
 function onLoad (){
   card.forEach((card)=>{
