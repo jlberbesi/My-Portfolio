@@ -503,6 +503,11 @@ label {
   display: none;
 }
 
+small {
+  color: red;
+  font-size: 1em;
+}
+
 /***** Footer *****/
 
 footer {
@@ -943,16 +948,6 @@ footer {
     margin: auto;
   }
 
-  .popup-container {
-    border: 20px solid #1a2236;
-    width: 95.8%;
-    padding: 2em;
-    position: absolute;
-    top: 0%;
-    margin: 0%;
-    left: -5%;
-  }
-
   .text-section {
     width: 70%;
     margin: auto;
@@ -961,6 +956,57 @@ footer {
   .btn-container {
     display: flex;
     gap: 1em;
+  }
+
+  #popup-window {
+    border: 20px solid #1a2236;
+    width: 95%;
+    height: 190vh;
+    padding: 0;
+    position: relative;
+  }
+
+  #popup-window .text-section p {
+    font-size: 0.6em;
+    position: relative;
+  }
+
+  #popup-window .popup-header {
+    position: relative;
+    font-size: 1em;
+    color: #1a2236;
+  }
+
+  #popup-window .popup-container {
+    line-height: 90%;
+    position: absolute;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    left: 0%;
+    top: 0;
+    right: 0%;
+  }
+
+  #popup-window #project-img {
+    height: 50vh;
+    position: relative;
+  }
+
+  .sub img {
+    width: 100%;
+    height: 20vh;
+  }
+
+  .popup-footer > div > img {
+    width: 1em;
+    height: 0.5em;
+  }
+
+  #popup-window #project-img img {
+    width: 100%;
+    height: 100%;
   }
 
   #popup-window .seeBtn {
@@ -985,13 +1031,10 @@ footer {
     color: white;
   }
 
-  .popup-header {
-    color: #1a2236;
-    font-size: 1.5em;
-  }
-
   #popup-window ul > li button {
     transition: 0.5s;
+    padding: 0.1em;
+    border: 1.5px solid black;
   }
 
   #popup-window ul > li button:hover {
@@ -1000,7 +1043,7 @@ footer {
   }
 
   #sub-images {
-    height: 30vh;
+    height: 20vh;
   }
 
   .popup-footer > div {
@@ -1010,12 +1053,7 @@ footer {
   }
 
   #sub-images div {
-    height: 30vh;
-  }
-
-  .sub img {
-    width: 100%;
-    height: 30vh;
+    height: 20vh;
   }
 
   .popup-footer {
@@ -1024,16 +1062,11 @@ footer {
     justify-content: space-between;
   }
 
-  .popup-footer > div > img {
-    width: 1em;
-    height: 0.5em;
-  }
-
   .popup-footer > div > a {
     font-size: 0.8em;
   }
 
-  #popup-close-btn {
+  #popup-window #popup-close-btn {
     float: right;
   }
 
