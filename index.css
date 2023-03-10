@@ -728,28 +728,28 @@ footer {
     background-repeat: no-repeat;
   }
 
-  .desktop-card1 {
+  .desktop-card2 {
     width: 60%;
     top: 171%;
     right: 0%;
     position: absolute;
   }
 
-  .desktop-card1 .project_description {
+  .desktop-card2 .project_description {
     position: absolute;
     bottom: 0%;
     left: 0%;
     right: 0%;
   }
 
-  .desktop-card2 {
+  .desktop-card1 {
     width: 28%;
     position: absolute;
     top: 250%;
     right: 0;
   }
 
-  .desktop-card2 .project_description {
+  .desktop-card1 .project_description {
     position: absolute;
     bottom: 0%;
     right: 0%;
@@ -852,35 +852,35 @@ footer {
     position: relative;
   }
 
-  .desktop-card2 .project_description .project_name,
+  .desktop-card1 .project_description .project_name,
   .desktop-card6 .project_description .project_name {
     font-size: 1em;
     font-weight: 400;
   }
 
-  .desktop-card2 .project_description li button,
+  .desktop-card1 .project_description li button,
   .desktop-card6 .project_description li button {
     font-size: 0.6rem;
   }
 
-  .desktop-card2 .project_description ul,
+  .desktop-card1 .project_description ul,
   .desktop-card6 .project_description ul {
     gap: 0.2em;
   }
 
-  .desktop-card2 .project_description .see_project,
+  .desktop-card1 .project_description .see_project,
   .desktop-card6 .project_description .see_project {
     width: 75%;
     padding: 0 1em 0 1em;
     margin-top: 0.5em;
   }
 
-  .desktop-card2 .project_description .see_project p,
+  .desktop-card1 .project_description .see_project p,
   .desktop-card6 .project_description .see_project p {
     font-size: 0.7rem;
   }
 
-  .desktop-card2:hover.desktop-card2 .project_description {
+  .desktop-card1:hover.desktop-card1 .project_description {
     display: block;
   }
 
@@ -961,6 +961,7 @@ footer {
 
   .btn-container {
     display: flex;
+    flex-direction: row;
     gap: 1em;
   }
 
