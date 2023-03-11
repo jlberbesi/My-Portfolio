@@ -143,8 +143,9 @@ a {
 .project_cards {
   width: 100%;
   display: grid;
+  margin-top: 3em;
   grid-template-columns: 1fr;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 .desktop-project-shapes {
@@ -155,6 +156,8 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin-bottom: 0;
 }
 
 .card img {
@@ -213,6 +216,7 @@ a {
 }
 
 #projects h1 {
+  margin-bottom: 0;
   margin-left: 1em;
 }
 
@@ -234,6 +238,119 @@ a {
   display: none;
 }
 
+/***** Popup Window *****/
+
+.popup-window-inactive {
+  display: none;
+}
+
+.popup-window-active {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  position: absolute;
+  top: 0%;
+  left: 0;
+  right: 0%;
+  bottom: 0%;
+  width: 85%;
+  z-index: 999;
+}
+
+#project-img {
+  position: relative;
+  width: 100%;
+  margin: 0%;
+}
+
+#project-img img {
+  width: 100%;
+}
+
+.forward-arrow {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+}
+
+#sub-images {
+  width: 100%;
+  height: 10vh;
+  display: grid;
+  top: -0.5em;
+  position: relative;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#sub-images div {
+  position: relative;
+  height: 10vh;
+  border: 1px solid rgba(11, 11, 11, 0.191);
+}
+
+#sub-images img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#sub-images .sub1 {
+  border: 5px solid rgba(0, 0, 0, 0.282);
+}
+
+.pop-up-window-inactive {
+  display: none;
+}
+
+#popup-window ul {
+  display: flex;
+  gap: 1.5em;
+  padding-inline-start: 0%;
+  align-items: center;
+}
+
+#popup-window ul > li button {
+  background-color: white;
+  padding: 0.5em;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup-window .seeBtn {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid black;
+  align-self: center;
+  width: 60%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+#popup-window .seeBtn p {
+  font-size: 1em;
+}
+
+#popup-close-btn {
+  display: flex;
+  align-self: flex-end;
+}
+
+.popup-close {
+  width: 2em;
+}
+
 /***** About Myself *****/
 
 #about_myself {
@@ -242,7 +359,7 @@ a {
   flex-direction: column;
 }
 
-#about_myself button {
+#about_myself .get-cv {
   background-color: #1a2236;
   display: flex;
   justify-content: center;
@@ -252,11 +369,11 @@ a {
   margin-bottom: 2rem;
 }
 
-#about_myself button:hover {
+#about_myself .get-cv:hover {
   cursor: pointer;
 }
 
-#about_myself button p {
+#about_myself .get-cv p {
   color: white;
   font-weight: 500;
   font-size: 1.5em;
@@ -265,7 +382,6 @@ a {
 .about_cards {
   display: flex;
   flex-direction: column;
-  gap: 1em;
 }
 
 .about_card {
@@ -292,7 +408,7 @@ a {
   color: white;
 }
 
-.about_card ul {
+.about_card .card-list-container {
   display: flex;
   flex-direction: column;
   padding-inline-start: 1em;
@@ -393,6 +509,11 @@ label {
   display: none;
 }
 
+small {
+  color: red;
+  font-size: 1em;
+}
+
 /***** Footer *****/
 
 footer {
@@ -417,6 +538,10 @@ footer {
 
 .handles svg:hover {
   cursor: pointer;
+}
+
+.popup-footer {
+  display: none;
 }
 
 /***** Desktop Version *****/
@@ -559,17 +684,20 @@ footer {
   }
 
   .project_cards {
-    display: none;
+    display: block;
   }
 
   .design_row1 {
     display: flex;
+    position: relative;
+    top: 5.5em;
     justify-content: space-between;
   }
 
   .design_row1 .r1_col1 {
     width: 20%;
     position: relative;
+    left: 2rem;
   }
 
   .r1_col1 .projects-header {
@@ -590,55 +718,123 @@ footer {
     height: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: 100% 0;
+    background-position: 100%;
   }
 
   .design_row1 .r1_col3 {
     width: 69%;
-    background-image: url(assets/shapes/Rectangle\ 21.png);
+    background-image: url(assets/shapes/Rectangle_21.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  .r1_col3 .project_description {
-    margin-top: 10em;
-    background-color: #1a2236ef;
+  .desktop-card2 {
+    width: 60%;
+    top: 171%;
+    right: 0%;
+    position: absolute;
   }
 
-  .r1_col3 .project_description .see_project p {
-    color: #1a2236;
-    font-size: 1.5em;
+  .desktop-card2 .project_description {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
   }
 
-  .r1_col3 .project_description .see_project {
-    background-color: white;
-    height: 4em;
+  .desktop-card1 {
+    width: 28%;
+    position: absolute;
+    top: 250%;
+    right: 0;
+  }
+
+  .desktop-card1 .project_description {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    height: 50%;
+    line-height: 1em;
+    display: none;
+  }
+
+  .desktop-card3 {
+    position: absolute;
+    top: 305%;
+    width: 54%;
+  }
+
+  .desktop-card3 .project_description {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    display: none;
+  }
+
+  .desktop-card4 {
+    width: 45%;
+    position: absolute;
+    top: 376%;
+    left: 26.9rem;
+  }
+
+  .desktop-card4 .project_description {
+    position: absolute;
+    display: none;
+  }
+
+  .desktop-card5 .project_description {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    display: none;
+  }
+
+  .desktop-card6 .project_description {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    height: 50%;
+    line-height: 1em;
+    display: none;
   }
 
   .design_row2 {
     display: flex;
+    position: relative;
+    top: 19rem;
     justify-content: space-between;
     height: 60vh;
   }
 
-  .design_row2 .r2_col1 {
-    width: 30%;
-    position: relative;
+  .desktop-card5 {
+    width: 38%;
+    top: 255%;
+    position: absolute;
   }
 
-  .r2_col1 .rectangle-46 {
-    background-image: url(assets/shapes/Rectangle\ 46.png);
-    width: 100%;
-    height: 73%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    top: 3em;
+  .desktop-card5:hover.desktop-card5 .project_description {
+    display: block;
+  }
+
+  .desktop-card6 {
     position: absolute;
+    width: 28%;
+    top: 290%;
+    right: 0%;
+  }
+
+  .desktop-card6:hover.desktop-card6 .project_description {
+    display: block;
   }
 
   .design_row2 .r2_col2 {
     width: 35%;
+    left: 10.7rem;
     position: relative;
   }
 
@@ -651,81 +847,54 @@ footer {
     position: absolute;
   }
 
-  .r2_col3 {
-    background-image: url(assets/shapes/Rectangle_21_4.png);
-    background-size: cover;
-    background-position: -4em -2em;
-  }
-
   .design_row2 .r2_col3 {
     width: 35%;
     position: relative;
   }
 
-  .r2_col3 .project_description {
-    margin-top: 2em;
-    padding: 1em 2em 0 2em;
-    height: 10em;
-  }
-
-  .r2_col3 .project_description .see_project {
-    background-color: white;
-    height: 30%;
-    width: 60%;
-    margin-bottom: 4em;
-  }
-
-  .r2_col3 .project_description ul {
-    gap: 0.4em;
-    margin-bottom: -0.8em;
-  }
-
-  .r2_col3 .project_description ul li button {
-    padding: 0.8em;
-    width: 100%;
-  }
-
-  .r2_col3 .project_description .project_name {
-    font-weight: 400;
-    width: 100%;
-    line-height: 0.7em;
-  }
-
-  .r2_col3 .project_description .see_project p {
-    color: #1a2236;
+  .desktop-card1 .project_description .project_name,
+  .desktop-card6 .project_description .project_name {
     font-size: 1em;
+    font-weight: 400;
   }
 
-  .r2_col3 .rectangle-26 {
-    background-image: url(assets/shapes/Rectangle\ 26.png);
-    width: 100%;
-    height: 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .desktop-card1 .project_description li button,
+  .desktop-card6 .project_description li button {
+    font-size: 0.6rem;
+  }
+
+  .desktop-card1 .project_description ul,
+  .desktop-card6 .project_description ul {
+    gap: 0.2em;
+  }
+
+  .desktop-card1 .project_description .see_project,
+  .desktop-card6 .project_description .see_project {
+    width: 75%;
+    padding: 0 1em 0 1em;
+    margin-top: 0.5em;
+  }
+
+  .desktop-card1 .project_description .see_project p,
+  .desktop-card6 .project_description .see_project p {
+    font-size: 0.7rem;
+  }
+
+  .desktop-card1:hover.desktop-card1 .project_description {
+    display: block;
   }
 
   .design_row3 {
     margin-top: 8em;
     display: flex;
+    position: relative;
+    top: 15rem;
     align-items: flex-end;
     justify-content: space-between;
   }
 
-  .design_row3 .r3_col1 {
-    width: 52%;
-    height: 50vh;
-    position: relative;
-  }
-
-  .r3_col1 .rectangle-21_1 {
-    background-image: url(assets/shapes/Rectangle_21_1.png);
-    width: 102%;
-    height: 165%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: -70.5%;
+  .desktop-card3:hover.desktop-card3 .project_description {
+    display: block;
   }
 
   .r3_col2 {
@@ -744,6 +913,8 @@ footer {
 
   .design_row4 {
     display: flex;
+    position: relative;
+    top: 15rem;
     justify-content: space-between;
   }
 
@@ -765,26 +936,153 @@ footer {
     height: 3em;
   }
 
-  .r4_col2 {
-    width: 47%;
-    position: relative;
-    height: 22em;
+  .desktop-card4:hover.desktop-card4 .project_description {
+    display: block;
+    bottom: 0;
+    width: 92%;
+    height: 55%;
   }
 
-  .rectangle-21_2 {
-    background-repeat: no-repeat;
-    background-image: url(assets/shapes/Rectangle_21_2.png);
-    height: 100%;
-    width: 60%;
+  #project-header {
+    display: none;
+  }
+
+  /***** Popup Window Desktop *****/
+
+  .popup-window-active {
+    display: flex;
+    margin: auto;
+  }
+
+  .text-section {
+    width: 70%;
+    margin: auto;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  #popup-window {
+    border: 20px solid #1a2236;
+    width: 95%;
+    height: 190vh;
+    padding: 0;
+    position: relative;
+  }
+
+  #popup-window .text-section p {
+    font-size: 0.6em;
+    position: relative;
+  }
+
+  #popup-window .popup-header {
+    position: relative;
+    font-size: 1em;
+    color: #1a2236;
+  }
+
+  #popup-window .popup-container {
+    line-height: 90%;
     position: absolute;
-    top: -0.9em;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    left: 0%;
+    top: 0;
+    right: 0%;
+  }
+
+  #popup-window #project-img {
+    height: 50vh;
+    position: relative;
+  }
+
+  .sub img {
+    width: 100%;
+    height: 20vh;
+  }
+
+  .popup-footer > div > img {
+    width: 1em;
+    height: 0.5em;
+  }
+
+  #popup-window #project-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #popup-window .seeBtn {
+    padding: 0.5rem 1rem;
+    height: 1em;
+    width: 30%;
+    transition: 0.5s;
+  }
+
+  #popup-window .seeBtn:hover {
+    cursor: pointer;
+    background-color: #1a2236;
+  }
+
+  #popup-window .seeBtn:hover svg {
+    background-color: #98dede;
+    border-radius: 2px;
+    padding: 0.2em;
+  }
+
+  #popup-window .seeBtn:hover p {
+    color: white;
+  }
+
+  #popup-window ul > li button {
+    transition: 0.5s;
+    padding: 0.1em;
+    border: 1.5px solid black;
+  }
+
+  #popup-window ul > li button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 145, 0);
+  }
+
+  #sub-images {
+    height: 20vh;
+  }
+
+  .popup-footer > div {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #sub-images div {
+    height: 20vh;
+  }
+
+  .popup-footer {
+    display: flex;
+    margin-top: 2em;
+    justify-content: space-between;
+  }
+
+  .popup-footer > div > a {
+    font-size: 0.8em;
+  }
+
+  #popup-window #popup-close-btn {
+    float: right;
   }
 
   /***** About Section *****/
 
   #about_myself {
     position: relative;
-    top: -8em;
+    margin-bottom: 5em;
+    top: 22em;
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -806,6 +1104,7 @@ footer {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     gap: 0;
+    position: relative;
   }
 
   .extra_card {
@@ -830,7 +1129,7 @@ footer {
 
   #contact {
     padding-top: 5em;
-    margin-top: 5em;
+    margin-top: 25em;
     position: relative;
     display: flex;
     justify-content: center;
