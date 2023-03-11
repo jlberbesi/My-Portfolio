@@ -184,21 +184,21 @@ form.addEventListener('submit', (e) => {
 
 const nameData = document.getElementById('name');
 const emailData = document.getElementById('email');
-const messageData = document.getElementById('msg');
+const storeMessage = document.getElementById('msg');
 
 function saveTolStorage() {
   const data = {
     name: nameData.value,
     email: emailData.value,
-    message: messageData.value,
+    message: storeMessage.value,
   };
-
+ 
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
 nameData.addEventListener('input', saveTolStorage);
 emailData.addEventListener('input', saveTolStorage);
-messageData.addEventListener('input', saveTolStorage);
+storeMessage.addEventListener('input', saveTolStorage);
 
 window.addEventListener('load', () => {
   const dataString = localStorage.getItem('formData');
@@ -208,6 +208,6 @@ window.addEventListener('load', () => {
 
     nameData.value = data.name;
     emailData.value = data.email;
-    messageData.value = data.message;
+    storeMessage.value = data.message;
   }
 });
