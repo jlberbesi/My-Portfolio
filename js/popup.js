@@ -172,12 +172,12 @@ contactBtn.addEventListener('click', () => {
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  let name = document.forms['myForm']['email'].value;
-  var reg = /^([a-z0-9_\-\.]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
-  if (reg.test(name) == false) {
-    form.children[4].innerHTML = "Please remove all caps from email";
-  }else {
-    form.children[4].innerHTML = "";
+  const name = document.getElementById('email').value;
+  const reg = /^([a-z0-9_]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+  if (reg.test(name) === false) {
+    form.children[4].innerHTML = 'Please remove all caps from email';
+  } else {
+    form.children[4].innerHTML = '';
     form.submit();
   }
-})
+});
