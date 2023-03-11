@@ -14,9 +14,6 @@ const contactBtn = document.getElementById('contact-btn');
 const headerDesign = document.getElementById('shape2');
 const shape1 = document.getElementById('shape1');
 const form = document.querySelector('#myForm');
-const email = document.getElementById('email');
-const fullname = document.getElementById('name');
-const message = document.getElementById('msg');
 
 function generateCard(card) {
   return `
@@ -185,35 +182,32 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-const formObject = {
-	name : fullname.value,
-	email : email.value,
-	message : message.value,
+const nameData = document.getElementById('name');
+const emailData = document.getElementById('email');
+const messageData = document.getElementById('msg');
+
+function saveToLocalStorage() {
+  const data = {
+    name: nameData.value,
+    email: emailData.value,
+    message: messageData.value,
+  };
+
+  localStorage.setItem('formData', JSON.stringify(data));
+}
+
+nameData.addEventListener('input', saveToLocalStorage);
+emailData.addEventListener('input', saveToLocalStorage);
+messageData.addEventListener('input', saveToLocalStorage);
+
+window.addEventListener('load', () => {
+  const dataString = localStorage.getItem('formData');
+
+  if (dataString) {
+    const data = JSON.parse(dataString);
+
+    nameData.value = data.name;
+    emailData.value = data.email;
+    messageData.value = data.message;
   }
-
-if(!localStorage.getItem('formObject')) {
-  populateStorage();
-} else {
-  setInputs();
-}
-  
-function populateStorage() {
-	localStorage.setItem('formObject', JSON.stringify(formObject) );
-	setInputs();
-	}
-  
-document.getElementById('name').onchange = populateStorage();
-document.getElementById('email').onchange = populateStorage();
-document.getElementById('msg').onchange = populateStorage();
-  
-function setInputs() {
-	const currentObject = JSON.parse(localStorage.getItem('formObject'));
-	let currentEmail = currentObject.email;
-	let currentName = currentObject.name;
-	let currentMessage = currentObject.message;
-	document.getElementById('name').value = currentName;
-	document.getElementById('email').value = currentEmail;
-	document.getElementById('msg').value = currentMessage;
-  console.log(currentObject);
-}
-
+});
