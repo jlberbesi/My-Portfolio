@@ -169,3 +169,15 @@ contactBtn.addEventListener('click', () => {
   headerDesign.style.display = 'block';
   shape1.style.display = 'block';
 });
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('email').value;
+  const reg = /^([a-z0-9_]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+  if (reg.test(name) === false) {
+    form.children[4].innerHTML = 'Please enter a correct email format';
+  } else {
+    form.children[4].innerHTML = '';
+    form.submit();
+  }
+});
