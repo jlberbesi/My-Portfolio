@@ -13,6 +13,7 @@ const aboutBtn = document.getElementById('about-btn');
 const contactBtn = document.getElementById('contact-btn');
 const headerDesign = document.getElementById('shape2');
 const shape1 = document.getElementById('shape1');
+const form = document.querySelector('#myForm');
 
 function generateCard(card) {
   return `
@@ -167,4 +168,16 @@ contactBtn.addEventListener('click', () => {
   body.style.overflow = 'auto';
   headerDesign.style.display = 'block';
   shape1.style.display = 'block';
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.getElementById('email').value;
+  const reg = /^([a-z0-9_]+)@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
+  if (reg.test(name) === false) {
+    form.children[4].innerHTML = 'Please enter a correct email format';
+  } else {
+    form.children[4].innerHTML = '';
+    form.submit();
+  }
 });
