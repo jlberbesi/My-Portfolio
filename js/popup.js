@@ -186,7 +186,7 @@ const nameData = document.getElementById('name');
 const emailData = document.getElementById('email');
 const messageData = document.getElementById('msg');
 
-function saveToLocalStorage() {
+function saveTolStorage() {
   const data = {
     name: nameData.value,
     email: emailData.value,
@@ -196,9 +196,9 @@ function saveToLocalStorage() {
   localStorage.setItem('formData', JSON.stringify(data));
 }
 
-nameData.addEventListener('input', saveToLocalStorage);
-emailData.addEventListener('input', saveToLocalStorage);
-messageData.addEventListener('input', saveToLocalStorage);
+nameData.addEventListener('input', saveTolStorage);
+emailData.addEventListener('input', saveTolStorage);
+messageData.addEventListener('input', saveTolStorage);
 
 window.addEventListener('load', () => {
   const dataString = localStorage.getItem('formData');
