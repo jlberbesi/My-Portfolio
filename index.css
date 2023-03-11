@@ -511,7 +511,7 @@ label {
 
 small {
   color: red;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 /***** Footer *****/
@@ -1188,7 +1188,7 @@ footer {
   }
 
   .form_button {
-    width: 30%;
+    width: 40%;
     margin: auto;
   }
 
